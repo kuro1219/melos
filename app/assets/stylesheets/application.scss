@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* メニューバー */
+  nav.menubar {
+     padding: 2px;
+     background-color: #000;
+     color: #ccc;
+     font-size: 80%;
+    padding: 8px 16px;
+   }
+  
+   nav.menubar ul li:not(:last-child):after {
+     color: #ccc;
+     content: " | ";
+     margin: 0 2px;
+   }
+
+   /* メニューバーのリンク */
+   nav.menubar a { text-decoration: none; }
+  
+   /* メニューバーのリンク（未訪問） */
+   nav.menubar a:link { color: #ccc; }
+  
+   /* メニューバーのリンク（訪問済） */
+   nav.menubar a:visited { color: #ccc; }
+  
+   /* メニューバーのリンク（マウスを合わせたとき） */
+   nav.menubar a:hover {
+     color: #f88;
+     text-decoration: underline;
+   }
+  
+   /* メニューバーのリンク（現在のページ） */
+   nav.menubar span {
+     color: #ff8;
+     font-weight: bold;
+   }
+
+   /* サイドメニュー */
+   nav.side-menu{
+     color:#ccc;
+     background-color: #f88;
+
+   }
+
+
+   /* フッター */
+   footer {
+     clear: both;
+     font: 11px Verdana;
+     color: #888;
+     padding: 8px 0;
+     border-top: 4px solid #6bb;
+     text-align: center;
+   }
+  
+   footer nav ul li:not(:last-child):after {
+     color: #888;
+     content: " | ";
+     margin: 0 5px;
+   }

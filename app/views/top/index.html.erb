@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Melos</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  
+  <body>
+    <header>
+    
+    </header>
+    <main>
+    <% if flash.notice %>
+      <p class="notice"><%= flash.notice %></p>
+    <% end %> 
+
+    <div class="container">
+    <%= render "shared/menubar" %>
+    <div class="row">
+    <div class="col">
+    <nav class="navbar navbar-expand-sm">
+    <%= render "shared/sidemenu" %>
+    </nav>
+    </div>
+    <div class="col">
+    <%= yield %>
+    </div>
+    <div class="col">
+    <%= render "shared/account" %>
+    <%= render "shared/studyrecord" %>
+    </div>
+    </div>
+    </div>
+    </main>
+    <footer>
+        <%= render "shared/footer" %>
+    </footer> 
+  </body>
+</html>
